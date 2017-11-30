@@ -1,0 +1,9 @@
+C:\xampp\htdocs\asp.netcourse\CheckOutPge\CheckOutPge\bin\CheckOutPge.dll.config
+C:\xampp\htdocs\asp.netcourse\CheckOutPge\CheckOutPge\bin\CheckOutPge.dll
+C:\xampp\htdocs\asp.netcourse\CheckOutPge\CheckOutPge\bin\CheckOutPge.pdb
+C:\xampp\htdocs\asp.netcourse\CheckOutPge\CheckOutPge\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\xampp\htdocs\asp.netcourse\CheckOutPge\CheckOutPge\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\xampp\htdocs\asp.netcourse\CheckOutPge\CheckOutPge\obj\Debug\CheckOutPge.csprojResolveAssemblyReference.cache
+C:\xampp\htdocs\asp.netcourse\CheckOutPge\CheckOutPge\obj\Debug\CheckOutPge.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\asp.netcourse\CheckOutPge\CheckOutPge\obj\Debug\CheckOutPge.dll
+C:\xampp\htdocs\asp.netcourse\CheckOutPge\CheckOutPge\obj\Debug\CheckOutPge.pdb
