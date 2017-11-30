@@ -259,7 +259,7 @@
             <tr>
                 <td class="auto-style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; State:</td>
                 <td class="auto-style39">
-                    <asp:DropDownList ID="ddlState" runat="server" Height="16px" Width="180px" AutoPostBack="True" BackColor="#CCCCCC" ForeColor="Black" OnSelectedIndexChanged="ddlState_SelectedIndexChanged">
+                    <asp:DropDownList ID="ddlState" runat="server" Height="16px" Width="180px" AutoPostBack="True" BackColor="#CCCCCC" ForeColor="Black" >
                        
                         <asp:ListItem Value="">Select State</asp:ListItem>
                         
@@ -323,7 +323,7 @@
                 <td class="auto-style11">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; State:</td>
                 <td class="auto-style29">
                    
-                    <asp:DropDownList ID="ddlState1" runat="server" Height="16px" Width="180px" AutoPostBack="True" BackColor="#CCCCCC" ForeColor="Black" OnSelectedIndexChanged="ddlState1_SelectedIndexChanged">
+                    <asp:DropDownList ID="ddlState1" runat="server" Height="16px" Width="180px" AutoPostBack="True" BackColor="#CCCCCC" ForeColor="Black" >
                      
                         
                         <asp:ListItem Value="">Select State</asp:ListItem>
