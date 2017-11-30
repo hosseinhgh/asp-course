@@ -15,20 +15,14 @@ namespace CheckOutPge
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //????????????????????????????validate different version of c#
+            //valid different versiono of c#
             UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
+            //mouse on load page stay in this text box
+            tbEmail.Focus();
         }
 
-        protected void btnSubmit_Click(object sender, EventArgs e)
-        {
-            String newUser = getInfo();
-            lblBox.Text = newUser;
-            lbPrint.Text = getInfo();
-            lbPrint.Text = getShipping();
-            lbPrint.Text = getBilling();
-
-            clearForm();
-        }
+        
+        //clear  the form
         private void clearForm()
         {
 
@@ -44,53 +38,11 @@ namespace CheckOutPge
             ddlState.SelectedIndex = 0;
             tbZipecode.Text = "";
             
-
-            if (chSameAddress.Checked !=true)
-            {
-
-                tbAddress1.Text = "";
-                tbCity1.Text = "";
-                ddlState1.SelectedIndex = 0;
-                tbZipcode1.Text = "";
-            }
-            else
-            {
-//                //////
-//                < table >
-//    < tr >
-//        < td >
-//            < asp:CheckBox ID = "chkbxUS" runat = "server" onchange = "validate();" />
-
-
-//             </ td >
-
-
-//             < td id = "ParentCountryInfo" >
-
-
-//                  < asp:TextBox ID = "TextBox1" runat = "server" > Disappear me </ asp:TextBox >
-
-
-//                       </ td >
-
-
-//                   </ tr >
-//               </ table >
-
-
-
-//               < script type = "text/javascript" >
-//                    function validate() {
-//                    if (document.getElementById('<%=chkbxUS.ClientID%>').checked) {
-//                            document.getElementById("ParentCountryInfo").style.visibility = 'hidden';
-//                        } else {
-//                            document.getElementById("ParentCountryInfo").style.visibility = 'visible';
-//                        }
-//                        }
-//</ script >
-                            }
-
-
+            tbAddress1.Text = "";
+            tbCity1.Text = "";
+            ddlState1.SelectedIndex = 0;
+            tbZipcode1.Text = "";
+            
         }
         
 
@@ -116,7 +68,6 @@ namespace CheckOutPge
             string address = tbAddress.Text;
             string city = tbCity.Text;
             string state = ddlState.SelectedValue;
-            /////?????????????????????????????????????????????????????????????????
             string zipecode = tbZipecode.Text;
             
 
@@ -128,7 +79,6 @@ namespace CheckOutPge
             string address1 = tbAddress1.Text;
             string city1 = tbCity1.Text;
             string state1 = ddlState1.SelectedValue;
-            /////?????????????????????????????????????????????????????????????????
             string zipecode1 = tbZipecode.Text;
 
 
@@ -137,7 +87,48 @@ namespace CheckOutPge
 
         }
 
+        protected void btCheckOut_Click1(object sender, EventArgs e)
+        {
+            Page.Validate();
+            if (Page.IsValid)
+            {
+                String userInfo = getInfo();
+                String shippingInfo = getShipping();
+                String billingInfo = getBilling();
 
+                lblBox.Items.Add(userInfo);
+                lblBox.Items.Add(shippingInfo);
+                lblBox.Items.Add(billingInfo);
+
+
+
+                clearForm();
+            }
+        }
+
+        protected void chSameAddress_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (chSameAddress.Checked == false )
+            {
+                 tbAddress1.Enabled=true;
+                tbCity1.Enabled = true;
+                ddlState1.Enabled = true;
+                tbZipecode.Enabled = true;
+
+            }
+            else
+            {
+                tbAddress1.Enabled = false;
+                tbCity1.Enabled = false;
+                ddlState1.Enabled = false;
+                tbZipecode.Enabled = false;
+
+            }
+
+        }
     }
 }
 
+
+            

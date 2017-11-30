@@ -220,7 +220,7 @@
                 <td class="auto-style49">&nbsp; Phone Number:</td>
                 <td class="auto-style50">
                     <asp:TextBox ID="tbPhone" runat="server" Width="180px" BackColor="#CCCCCC" ForeColor="Black"></asp:TextBox>
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="tbPhone" ErrorMessage="Use this format 123-456-7890" ForeColor="Red">*</asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="tbPhone" ErrorMessage="Use this format 123-456-7890" ForeColor="Red" ValidationExpression="((\(\d{3}\) ?)|(\d{3}-))?\d{3}-\d{4}">*</asp:RegularExpressionValidator>
                 </td>
                 <td aria-setsize="180" class="auto-style51">
                 </td>
@@ -300,7 +300,7 @@
             </tr>
             <tr>
                 <td class="auto-style6">
-                    <asp:CheckBox ID="chSameAddress" runat="server" Text="Same as a billing address" />
+                    <asp:CheckBox ID="chSameAddress" runat="server" Text="Same as a billing address" OnCheckedChanged="chSameAddress_CheckedChanged" />
 &nbsp;&nbsp; </td>
                 <td class="auto-style39">&nbsp;</td>
                 <td aria-setsize="180" class="auto-style42">&nbsp;</td>
@@ -315,7 +315,7 @@
             <tr>
                 <td class="auto-style6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; City:</td>
                 <td class="auto-style39">
-                    <asp:TextBox ID="tbCity1" runat="server" OnTextChanged="tbCity1_TextChanged" Width="180px" BackColor="#CCCCCC" ForeColor="Black"></asp:TextBox>
+                    <asp:TextBox ID="tbCity1" runat="server"  Width="180px" BackColor="#CCCCCC" ForeColor="Black"></asp:TextBox>
                 </td>
                 <td aria-setsize="180" class="auto-style42">&nbsp;</td>
             </tr>
@@ -350,7 +350,7 @@
             <tr>
                 <td class="auto-style8">&nbsp;</td>
                 <td class="auto-style39">
-                    <asp:Button ID="btSubmit" runat="server" Text="Check Out" Width="180px" BackColor="#CCCCCC" ForeColor="Blue" />
+                    <asp:Button ID="btCheckOut" runat="server" Text="Check Out" Width="180px" BackColor="#CCCCCC" ForeColor="Blue" OnClick="btCheckOut_Click1" />
                 </td>
                 <td aria-setsize="180" class="auto-style42">&nbsp;</td>
             </tr>
